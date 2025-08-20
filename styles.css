@@ -4,15 +4,16 @@
     box-sizing: border-box;
 }
 body {
-    font-family:arial , sans-serif;
+    font-family: arial, sans-serif;
     line-height: 1.6;
     background: #f4f4f4;
 }
-/* cabeçalho*/
+
+/* cabeçalho */
 header {
     background: #333;
     color: #fff;
-    text-align:center ;
+    text-align:center;
 }
 header h1{
     margin-bottom: 0.5rem;
@@ -21,24 +22,21 @@ nav ul {
     list-style: none;
     padding: 0;
 }
-
 nav ul li{
     display: inline;
     margin: 0 10px;
 }
-
 nav ul li a {
     color:#fff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
-
 nav ul li a:hover{
     color:blueviolet;
     cursor: pointer;
 }
 
-/*seçoes*/
+/* seções */
 section {
     padding: 2rem;
     margin: 1rem;
@@ -46,30 +44,26 @@ section {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-
 .container {
     max-width: 800px;
     margin: 0 auto;
 }
-
-h2
-{
+h2 {
     margin-bottom: 1rem;
 }
 
-/*sobre mim */
-
-.sobre-mim{
+/* SOBRE MIM */
+.sobre-mim {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 2rem; /* espaçamento maior */
 }
-.foto-perfil{
-    width: 120px;
-    height:120px;
+.foto-perfil {
+    width: 180px;   /* foto maior */
+    height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid #333
+    border: 4px solid #333;
 }
 .sobre-informacoes {
     flex: 1;
@@ -81,7 +75,22 @@ h2
     font-size: 1rem;
     color: #555;
 }
-/*projetos*/
+
+/* Redes sociais ao lado da foto */
+.redes-sociais-perfil {
+    margin-top: 1rem;
+}
+.redes-sociais-perfil a {
+    margin-right: 15px;
+    font-size: 36px; /* ícones maiores */
+    color: #333;
+    transition: color 0.3s ease;
+}
+.redes-sociais-perfil a:hover {
+    color: blueviolet;
+}
+
+/* Projetos */
 .cards {
     display: flex;
     gap: 1rem;
@@ -92,15 +101,14 @@ h2
     padding: 1rem;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0,3s ease, box-shadow 0.3 ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card:hover {
-    transform: scale(1.5);
+    transform: scale(1.15); /* aumento suave */
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    
 }
 
-/*hobbies*/
+/* Hobbies */
 .hobbies {
     display: flex;
     flex-direction: column;
@@ -119,14 +127,14 @@ h2
     font-size: 2rem;
     color: #333;
 }
-hobby h3 {
+.hobby h3 {
     margin-bottom: 0.5rem;
 }
 .hobby p {
     color: #555;
 }
 
-/*Formulario*/
+/* Formulário */
 form {
     display: grid;
     gap: 1rem;
@@ -145,14 +153,26 @@ button {
     color: #fff;
     border: none;
     padding: 0.7rem;
-    border-radius: 4xp;
+    border-radius: 4px;
     cursor: pointer;
     transition: background 0.3s ease;
 }
 button:hover {
     background: crimson;
 }
-/*footer*/
+
+/* Redes sociais no formulário e outras seções */
+.redes-sociais a {
+    font-size: 36px; /* ícones grandes também no contato */
+    margin-right: 15px;
+    color: #333;
+    transition: color 0.3s ease;
+}
+.redes-sociais a:hover {
+    color: blueviolet;
+}
+
+/* Footer */
 footer{
     background: #333;
     color: #fff;
