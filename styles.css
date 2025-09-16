@@ -1,184 +1,250 @@
+/* ===== Reset ===== */
 * {
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
-    font-family: arial, sans-serif;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2e2e48);
+    color: #f5f5f5;
     line-height: 1.6;
-    background: #f4f4f4;
 }
 
-/* cabeçalho */
+/* ===== Header ===== */
 header {
-    background: #333;
-    color: #fff;
-    text-align:center;
+    background: #111;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-header h1{
-    margin-bottom: 0.5rem;
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ff9800;
 }
+
 nav ul {
     list-style: none;
-    padding: 0;
-}
-nav ul li{
-    display: inline;
-    margin: 0 10px;
-}
-nav ul li a {
-    color:#fff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-nav ul li a:hover{
-    color:blueviolet;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
 }
 
-/* seções */
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff9800;
+}
+
+/* ===== Seções ===== */
 section {
-    padding: 2rem;
-    margin: 1rem;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 60px 20px;
 }
+
 .container {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+    text-align: center;
 }
-h2 {
-    margin-bottom: 1rem;
+
+/* ===== Sobre ===== */
+#sobre {
+    padding: 80px 20px;
+    background: linear-gradient(145deg, #0f0f1a, #1a1a2e);
+    color: #fff;
+    text-align: center;
+    border-top: 2px solid #00ffff33;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.foto-perfil {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid #00ffff;
+    box-shadow: 0 0 25px #00ffffaa;
+    object-fit: cover;
+}
+
+.sobre-informacoes h2 {
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0 0 10px #00ffff;
+}
+
+.apelido {
+    font-size: 1.2rem;
+    color: #ff00ff;
+    margin: 5px 0;
+    text-shadow: 0 0 8px #ff00ff;
+}
+
+.email {
+    font-size: 1rem;
+    color: #00ffff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 6px #00ffff;
 }
 
 /* SOBRE MIM */
 .sobre-mim {
-    display: flex;
-    align-items: center;
-    gap: 2rem; /* espaçamento maior */
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #00ffff55;
+    box-shadow: 0 0 20px #00ffff33;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.sobre-mim h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+.sobre-mim ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sobre-mim ul li {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #eee;
+}
+
+.sobre-mim ul li strong {
+    color: #00ffff;
 }
 .foto-perfil {
-    width: 180px;   /* foto maior */
-    height: 180px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
+    border: 5px solid #ff9800;
     object-fit: cover;
-    border: 4px solid #333;
 }
-.sobre-informacoes {
-    flex: 1;
-}
+
 .sobre-informacoes h2 {
-    margin-bottom: 0.5rem;
-}
-.sobre-informacoes p {
-    font-size: 1rem;
-    color: #555;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ff9800;
 }
 
-/* Redes sociais ao lado da foto */
-.redes-sociais-perfil {
-    margin-top: 1rem;
-}
-.redes-sociais-perfil a {
-    margin-right: 15px;
-    font-size: 36px; /* ícones maiores */
-    color: #333;
-    transition: color 0.3s ease;
-}
-.redes-sociais-perfil a:hover {
-    color: blueviolet;
-}
-
-/* Projetos */
+/* ===== Projetos ===== */
 .cards {
-    display: flex;
-    gap: 1rem;
-}
-.card {
-    background: #f4f4f4;
-    border-radius: 8px;
-    padding: 1rem;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-    transform: scale(1.15); /* aumento suave */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-}
-
-/* Hobbies */
-.hobbies {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-.hobby {
-  display: flex;
-  align-items: center;
-  background: #f4f4f4;
-  border-radius: 8px;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  gap: 1rem;
-}
-.hobby i {
-    font-size: 2rem;
-    color: #333;
-}
-.hobby h3 {
-    margin-bottom: 0.5rem;
-}
-.hobby p {
-    color: #555;
-}
-
-/* Formulário */
-form {
     display: grid;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
 }
-label {
-    font-weight: bold;
+
+.card {
+    background: #2c2c3a;
+    padding: 20px;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
-input, textarea {
-    width: 100%;
-    padding: 0.5rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.6);
 }
-button {
-    background: #333;
+
+.card h3 {
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+.card a {
+    display: inline-block;
+    padding: 10px 18px;
+    background: #ff9800;
     color: #fff;
-    border: none;
-    padding: 0.7rem;
-    border-radius: 4px;
-    cursor: pointer;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
     transition: background 0.3s ease;
 }
-button:hover {
-    background: crimson;
+
+.card a:hover {
+    background: #e68900;
 }
 
-/* Redes sociais no formulário e outras seções */
+/* ===== Hobbies ===== */
+.hobbies {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.hobby {
+    background: #2c2c3a;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease;
+}
+
+.hobby:hover {
+    transform: scale(1.05);
+}
+
+.hobby i {
+    font-size: 40px;
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+/* ===== Redes Sociais ===== */
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 25px;
+}
+
 .redes-sociais a {
-    font-size: 36px; /* ícones grandes também no contato */
-    margin-right: 15px;
-    color: #333;
-    transition: color 0.3s ease;
-}
-.redes-sociais a:hover {
-    color: blueviolet;
+    font-size: 35px;
+    color: #fff;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-/* Footer */
-footer{
-    background: #333;
+.redes-sociais a:hover {
+    color: #ff9800;
+    transform: scale(1.2);
+}
+
+/* ===== Footer ===== */
+footer {
+    background: #111;
     color: #fff;
     text-align: center;
-    padding: 1rem 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    padding: 20px;
+    margin-top: 50px;
+    font-size: 0.9rem;
 }
